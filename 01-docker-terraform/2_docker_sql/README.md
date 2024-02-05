@@ -133,7 +133,7 @@ docker run -it \
   -e PGADMIN_DEFAULT_EMAIL="admin@admin.com" \
   -e PGADMIN_DEFAULT_PASSWORD="root" \
   -p 8080:80 \
-  --network=pg-network \
+  --network=2_docker_sql_default \
   --name pgadmin-2 \
   dpage/pgadmin4
 ```
@@ -184,11 +184,11 @@ Run the script with Docker
 URL="https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2021-01.csv.gz"
 
 docker run -it \
-  --network=pg-network \
+  --network=2_docker_sql_default \
   taxi_ingest:v001 \
     --user=root \
     --password=root \
-    --host=pg-database \
+    --host=pgdatabase \
     --port=5432 \
     --db=ny_taxi \
     --table_name=yellow_taxi_trips \
