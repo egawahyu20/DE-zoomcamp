@@ -171,3 +171,4 @@ scratch*
 *secrets*.json
 magic-zoomcamp
 *.json
+02-workflow-orchestration/mage/titanic_clean.csv
